@@ -11,14 +11,13 @@ class Weather {
     const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&APPID=${this.apiKey}`);
 
     const resData = await res.json();
-
     return resData;
   }
 
   // Change Weather Location
 
-  changeLocation(country, state) {
+  changeLocation(city, country) {
+    this.city = city;
     this.country = country;
-    this.state = state;
   }
 }
