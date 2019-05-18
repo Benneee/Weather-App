@@ -6,26 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Kodchasan&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('/wallpaper.jpg') no-repeat;
+      overflow: hidden;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      font-family: 'Kodchasan', sans-serif;
+    }
+
+    h3 {
+      color: white;
+      margin: auto;
+    }
+  </style>
   <title>Weather App</title>
 </head>
 
 <body>
 
+  <nav class="navbar bg-dark">
+    <h3>The Weather App</h3>
+  </nav>
+
   <div class="container">
     <div class="row">
-      <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+      <div class="col-md-6 mx-auto text-center bg-info mt-5 p-5 rounded">
         <h1 id="w-location"></h1>
 
-        <h3 class="text-dark" id="w-desc"></h3>
+        <h3 class="text-light" id="w-desc"></h3>
 
         <h3 id="w-string"></h3>
 
         <img id="w-icon">
 
         <ul class="list-group mt-3" id="w-details">
-          <li class="list-group-item" id="w-humidity"></li>
 
-          <li class="list-group-item" id="w-dewpoint"></li>
+          <li class="list-group-item" id="w-humidity"></li>
 
           <li class="list-group-item" id="w-feels-like"></li>
 

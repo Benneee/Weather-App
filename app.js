@@ -1,6 +1,9 @@
 // Initialise instance of weather class
 const weather = new Weather('Lagos', 'NG');
 
+// Initialise instance of UI class
+const ui = new UI();
+
 // Event listener to get weather
 document.addEventListener('DOMContentLoaded', getWeather);
 
@@ -9,7 +12,7 @@ function getWeather() {
   weather
     .getWeather()
     .then(res => {
-      console.log(res);
+      ui.paint(res);
     })
     .catch(err => console.log(err));
 }
